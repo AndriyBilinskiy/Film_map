@@ -74,7 +74,6 @@ def create_map(all_data, specific_year, start):
     all_fg = folium.FeatureGroup(name='Films Including all years')
     specific = folium.FeatureGroup(name='Films shot the specific year')
     for film in all_data:
-        print(film[4])
         description = film[0] + ' (' + film[1] + ')'
         all_fg.add_child(folium.Marker([film[3][0],film[3][1]], popup=description))
     for film in specific_year:
